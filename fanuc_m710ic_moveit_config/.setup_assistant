@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: fanuc_m710ic_description
+    relative_path: urdf/m710ic70.urdf
+  srdf:
+    relative_path: config/m710ic70.srdf
+  package_settings:
+    author_name: chandrahas
+    author_email: kasoju.chandrahas@gmail.com
+    generated_timestamp: 1718534056
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity

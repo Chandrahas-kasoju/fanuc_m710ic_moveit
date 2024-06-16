@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="m710ic70">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+
+    <!-- Import m710ic70 urdf file -->
+    <xacro:include filename="$(find fanuc_m710ic_description)/urdf/m710ic70.urdf" />
+
+    <!-- Import control_xacro -->
+    <xacro:include filename="m710ic70.ros2_control.xacro" />
+
+
+    <xacro:m710ic70_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
+
+</robot>
